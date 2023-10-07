@@ -15,8 +15,6 @@ public class Main {
         double secondNumber = scanner.nextDouble();
 
         //mutiple choice prompt
-        //scanner.nextLine();
-        //String calculationPrompt = scanner.nextLine();
         System.out.println("What do you want to do?");
         System.out.println("Add?");
         System.out.println("Subtract?");
