@@ -28,8 +28,8 @@ public class Main {
         totalInterest = (monthlyPayment * loanTermMonths) - principal;
 
         //Result
-        System.out.println("Your total monthly payment is $" + monthlyPayment);
-        System.out.println("The total amount of interest you will be paying is " + totalInterest);
+        System.out.printf("Your total monthly payment is $%.2f%n", monthlyPayment);
+        System.out.printf("The total amount of interest you will be paying is $%.2f%n", totalInterest);
 
         futureValue();
 
