@@ -2,6 +2,7 @@ package org.example;
 import java.util.Scanner;
 public class Book {
     //Properties
+    //Small quibble, the I in Id should be lowercase
     public int Id;
     public String isbn;
     public String title;
@@ -56,6 +57,16 @@ public class Book {
         this.title = title;
         this.checkedOutTo = checkedOutTo;
         this.isCheckedOut = isCheckedOut;
+    }
+
+    //You could do the constructor like this for less typing since you know in the beginning it won't be checked out
+    //and it's not checked out to anyone
+    public Book(int id, String isbn, String title) {
+        this.Id = id;
+        this.isbn = isbn;
+        this.title = title;
+        this.isCheckedOut = false;
+        this.checkedOutTo = "";
     }
 
     public static void showAvailableBooks(Book[] bookArray) {
