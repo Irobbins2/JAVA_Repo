@@ -30,8 +30,10 @@ public class LedgerMenu {
             while(scanner.hasNextLine()){
                 input = scanner.nextLine();
                 String[] parts = input.split("\\|");
+
                 if(choice.equalsIgnoreCase("A")){
                     System.out.println(input);
+
                 } else if (choice.equalsIgnoreCase("D")) {
                     try{
                         if (parts.length >= 5)
@@ -40,7 +42,7 @@ public class LedgerMenu {
                             System.out.println(input);
                     }
                     catch (NumberFormatException ex){
-                        System.out.println("Sorry that is invalid.");
+                        System.out.println("");
                     }
                 }
                 else if (choice.equalsIgnoreCase("P")) {
@@ -51,7 +53,7 @@ public class LedgerMenu {
                             System.out.println(input);
                     }
                     catch (NumberFormatException ex){
-                        System.out.println("Sorry that is invalid.");
+                        System.out.println("");
                     }
                 }
                 else if (choice.equalsIgnoreCase("R")){

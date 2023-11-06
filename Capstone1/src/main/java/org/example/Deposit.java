@@ -58,11 +58,10 @@ public class Deposit {
                 String line = fileScanner.nextLine();
                 String[] parts = line.split("\\|"); // Split the line into parts using the '|' character as the delimiter
                 if (parts.length >= 2) {
-                   // String date = parts[0];// Extract the date from the first part of the split line
-                   // String transactionTime = parts[1];//Extract time from the second part of the array
+
                     String transactionDescription = parts[2];
                     String transactionVendor = parts[3];
-                    //fileScanner.close(); // Close the file scanner when done
+
                     try{
                         double transactionAmount = Double.parseDouble(parts[4]);
                         depositHistory.add(new TransactionDeposit(dateInput, time, transactionDescription, transactionVendor, transactionAmount));
