@@ -3,7 +3,15 @@ package org.example;
 
 import java.util.Scanner;
 
-
+/*
+Nice work! I could check out a book and it appeared in the checkout list
+I could check in a book. I could not check out a book that was already checked out.
+I could not check in a book that was already in.
+My only advice is with the user interface. You're forcing the user to list out all the books and memorize
+the id of the book they want so when they check in and out they can use the id. That might get annoying after awhile.
+Lastly, you needed to prompt the user for a name so you could list who the book was checked out to. That's the only
+missing requirement.
+ */
 
 public class Main {
     public static void main(String[] args) {
@@ -11,7 +19,8 @@ public class Main {
         //Book inventory data
         Book[] bookArray = new Book[20];
 
-        bookArray[0] = new Book(0, "978-1982123961", "The Great Gatsby", "", false);
+        //With the shortened constructor you can save some typing since you know they're going to be false and a blank string anyway
+        bookArray[0] = new Book(0, "978-1982123961", "The Great Gatsby");
         bookArray[1] = new Book(1, "978-0061120084", "To Kill a Mockingbird", "", false);
         bookArray[2] = new Book(2, "978-0142000670", "1984", "", false);
         bookArray[3] = new Book(3, "978-1400031702", "Brave New World", "", false);
@@ -48,6 +57,7 @@ public class Main {
             //Allows user to enter a number
             int userInput = scanner.nextInt();
 
+            //Cool use of static methods here!
             switch (userInput) {
                 case 1:
                     Book.showAvailableBooks(bookArray);
