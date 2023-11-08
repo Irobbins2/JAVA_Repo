@@ -91,6 +91,7 @@ public class UserInterface {
                     break;
                 case 10:
                     //Exit
+                    //System.exit(0) would also work
                     System.out.println("Bye!");
                     return;
                 default:
@@ -101,6 +102,8 @@ public class UserInterface {
 
     }
     //Include a parameter that is passed in containing the vehicles to list
+    //Small quibble: public methods should be listed before private methods.
+    //But I'm glad you made a helper method
     private static void displayVehiclesHelperMethod(List <Vehicle> vehicles){
 
         //Create an if else loop
@@ -385,7 +388,7 @@ public class UserInterface {
                     dealership.inventory.remove(indexToRemove);
                     System.out.println("Vehicle was removed successfully!");
 
-                    DealershipFileManager.saveDealership(); // Save the changes to the file
+                    DealershipFileManager.saveDealership(dealership); // Save the changes to the file
 
                 }else {
                     System.out.println("Vehicle not found. No vehicles removed.");
