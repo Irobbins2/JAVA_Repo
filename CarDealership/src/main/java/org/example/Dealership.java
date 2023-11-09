@@ -45,6 +45,7 @@ public class Dealership {
     }
 
     // iterate through the inventory and print each vehicle to the console.
+    //Love the pseudo code
     public List<Vehicle> getAllVehicles() {
         //Create a new list to store the vehicles.
         List<Vehicle> allVehicles = new ArrayList<>();

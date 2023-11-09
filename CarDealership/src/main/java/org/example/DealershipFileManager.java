@@ -60,16 +60,20 @@ public class DealershipFileManager {
         //After the loop is finished, return the Dealership
         return dealership;
     }
-    public static void saveDealership(){
-       /* try{
-            (PrintWriter writer = new PrintWriter(new FileWriter("Inventory.csv"));
-            for (Vehicle vehicle : dealership.getInventory()) {
-                writer.println(vehicle.); // Convert the vehicle to CSV format
+
+    //I think if you just use FileWriter like we did in class it would be a bit less confusing
+    //I changed some stuff around to help you out a bit, but remember, saveDealership is
+    //not about writing stuff to the screen, it's about writing it to the FILE
+    public static void saveDealership(Dealership dealership) {
+        try {
+            PrintWriter writer = new PrintWriter(new FileWriter("Inventory.csv"));
+            for (Vehicle vehicle : dealership.getAllVehicles()) {
+                //writer.println(vehicle.); // Convert the vehicle to CSV format
             }
         } catch (IOException e) {
-            System.out.println("Error saving the dealership data: " + e.getMessage());*/
+            System.out.println("Error saving the dealership data: " + e.getMessage());
         }
 
-
+    }
     }
 
