@@ -69,11 +69,17 @@ public class DealershipFileManager {
             PrintWriter writer = new PrintWriter(new FileWriter("Inventory.csv"));
             for (Vehicle vehicle : dealership.getAllVehicles()) {
                 //writer.println(vehicle.); // Convert the vehicle to CSV format
+                writer.println(vehicleToCSV(vehicle));
             }
         } catch (IOException e) {
             System.out.println("Error saving the dealership data: " + e.getMessage());
         }
 
+    }
+    // Modify this method to convert a Vehicle object to a CSV format string
+    private static String vehicleToCSV(Vehicle vehicle) {
+
+        return vehicle.getMake() + "," + vehicle.getModel() + "," + vehicle.getYear() + "," + vehicle.getPrice();
     }
     }
 
